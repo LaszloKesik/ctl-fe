@@ -1,0 +1,6 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home/laezqr/public_html_ctl/www/
+ - /bin/cp * $DEPLOYPATH
+
