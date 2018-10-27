@@ -14,6 +14,7 @@ cache:
     - dist
 
 install:
+  - npm install
   - npm install -g @angular/cli
 
 jobs:
