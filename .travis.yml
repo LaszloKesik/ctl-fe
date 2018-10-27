@@ -22,10 +22,12 @@ jobs:
       script: 
       - ng build --prod --base-href https://laszlokesik.github.io/ctl-fe/
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist/ctl-fe
-  on:
-    branch: master
+    - stage: "Deploy"
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        local_dir: dist/ctl-fe
+        on:
+          branch: master
+
