@@ -2,5 +2,5 @@
 deployment:
  tasks:
  - export DEPLOYPATH=/home/laezqr/public_html_ctl/www/
- - /bin/cp index.html $DEPLOYPATH
- - /bin/cp Readme.md $DEPLOYPATH
+ - /bin/cp * $DEPLOYPATH
+

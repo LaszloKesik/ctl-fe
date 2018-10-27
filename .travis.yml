@@ -32,6 +32,7 @@ jobs:
     - stage: "Build"
       script: 
       - ng build --prod --base-href https://laszlokesik.github.io/ctl-fe/
+      - cp .cpanel.yml dist/ctl-fe/
 
     - stage: "Deploy"
       name: "Deploy to GitHub Pages"
