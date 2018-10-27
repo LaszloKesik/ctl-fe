@@ -8,7 +8,12 @@ branches:
   only:
   - master
 
-before_script:
+cache:
+  directories:
+    - node_modules
+    - dist
+
+install:
   - npm install -g @angular/cli
 
 jobs:
