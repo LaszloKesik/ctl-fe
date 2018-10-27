@@ -10,7 +10,14 @@ branches:
 
 before_script:
   - npm install -g @angular/cli
+  
+jobs:
+  include:
+    - stage: "Code Analysis"
+      name: "TS Lint"            
+      script:
+      - ng lint
 
-script:
-  - ng lint
-  - ng build --prod --base-href https://laszlokesik.github.io/ctl-fe/
+    - stage: "Build"
+      script: 
+      - ng build --prod --base-href https://laszlokesik.github.io/ctl-fe/
