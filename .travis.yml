@@ -18,11 +18,17 @@ jobs:
       script:
       - ng lint
 
+    - stage: "Test"
+      name: "Unit Test"            
+      script:
+      - npm run test
+
     - stage: "Build"
       script: 
       - ng build --prod --base-href https://laszlokesik.github.io/ctl-fe/
 
     - stage: "Deploy"
+      name: "Deploy to GitHub Pages"
       deploy:
         provider: pages
         skip_cleanup: true
